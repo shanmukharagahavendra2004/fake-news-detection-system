@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/raman/Desktop/fake%20news%20detection%20system/src/mlruns/429172305328967904/be3d4c461584442d806a5663e5adbfc0/artifacts
+end_time: 1769700673025
+entry_point_name: ''
+experiment_id: '429172305328967904'
+lifecycle_stage: active
+run_id: be3d4c461584442d806a5663e5adbfc0
+run_name: polite-perch-339
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1769700643643
+status: 3
+tags: []
+user_id: Admin

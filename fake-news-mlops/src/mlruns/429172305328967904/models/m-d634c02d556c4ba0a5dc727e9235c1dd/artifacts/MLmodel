@@ -1,0 +1,22 @@
+artifact_path: file:///C:/Users/raman/Desktop/fake%20news%20detection%20system/src/mlruns/429172305328967904/models/m-d634c02d556c4ba0a5dc727e9235c1dd/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.9.13
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.6.1
+mlflow_version: 3.1.4
+model_id: m-d634c02d556c4ba0a5dc727e9235c1dd
+model_size_bytes: 40720
+model_uuid: m-d634c02d556c4ba0a5dc727e9235c1dd
+prompts: null
+run_id: be3d4c461584442d806a5663e5adbfc0
+utc_time_created: '2026-01-29 15:31:04.315616'

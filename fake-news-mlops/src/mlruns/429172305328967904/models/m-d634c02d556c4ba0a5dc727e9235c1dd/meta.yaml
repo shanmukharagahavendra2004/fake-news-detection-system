@@ -1,0 +1,10 @@
+artifact_location: file:///C:/Users/raman/Desktop/fake%20news%20detection%20system/src/mlruns/429172305328967904/models/m-d634c02d556c4ba0a5dc727e9235c1dd/artifacts
+creation_timestamp: 1769700664251
+experiment_id: '429172305328967904'
+last_updated_timestamp: 1769700672907
+model_id: m-d634c02d556c4ba0a5dc727e9235c1dd
+model_type: null
+name: model
+source_run_id: be3d4c461584442d806a5663e5adbfc0
+status: 2
+status_message: null
