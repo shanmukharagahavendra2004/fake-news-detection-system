@@ -27,7 +27,9 @@ jobs:
         import nltk
         nltk.download('stopwords')
         nltk.download('punkt')
+        nltk.download('wordnet')  # <-- add this line
         EOF
+
 
     - name: Run training
       run: python fake-news-mlops/src/train.py
