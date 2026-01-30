@@ -23,6 +23,15 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r fake-news-mlops/requirements.txt
 
+    - name: Download NLTK data
+      run: |
+        python - <<EOF
+        import nltk
+        nltk.download('stopwords')
+        nltk.download('wordnet')
+        nltk.download('omw-1.4')
+        EOF
+
     - name: Run training
       run: |
         python fake-news-mlops/src/train.py
@@ -32,4 +41,3 @@ jobs:
       with:
         name: fake-news-model
         path: fake-news-mlops/models/
-
