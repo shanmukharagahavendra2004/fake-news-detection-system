@@ -88,10 +88,16 @@ with mlflow.start_run():
     # -----------------------------
     # 6. Save artifacts locally
     # -----------------------------
-    joblib.dump(model, "../models/fake_news_model.pkl")
-    joblib.dump(tfidf, "../models/tfidf_vectorizer.pkl")
+    MODELS_DIR = os.path.join(BASE_DIR, "models")
+    os.makedirs(MODELS_DIR, exist_ok=True)
 
-    mlflow.log_artifact("../models/fake_news_model.pkl")
-    mlflow.log_artifact("../models/tfidf_vectorizer.pkl")
+    model_path = os.path.join(MODELS_DIR, "fake_news_model.pkl")
+    tfidf_path = os.path.join(MODELS_DIR, "tfidf_vectorizer.pkl")
+
+    joblib.dump(model, model_path)
+    joblib.dump(tfidf, tfidf_path)
+
+    mlflow.log_artifact(model_path)
+    mlflow.log_artifact(tfidf_path)
 
 print("\n✅ Model, Vectorizer saved and tracked with MLflow successfully")
