@@ -16,8 +16,10 @@ CI_MODE = os.getenv("CI", "false").lower() == "true"
 # -----------------------------
 # 1. Load datasets
 # -----------------------------
-fake_df = pd.read_csv("../dataset/fake.csv")
-true_df = pd.read_csv("../dataset/true.csv")
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+fake_df = pd.read_csv(os.path.join(BASE_DIR, "dataset", "fake.csv"))
+true_df = pd.read_csv(os.path.join(BASE_DIR, "dataset", "true.csv"))
 
 fake_df["label"] = 0
 true_df["label"] = 1
