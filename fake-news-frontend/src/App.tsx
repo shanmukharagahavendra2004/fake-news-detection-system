@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./App.css";
 
+const apiUrl = process.env.REACT_APP_API_URL;
 const App: React.FC = () => {
   const [text, setText] = useState("");
   const [prediction, setPrediction] = useState<string | null>(null);
@@ -17,7 +18,7 @@ const App: React.FC = () => {
     setError(null);
 
     try {
-      const res = await axios.post("http://127.0.0.1:5000/predict", { text });
+      const res = await axios.post(`${apiUrl}/predict`, { text });
 
       setPrediction(res.data.prediction);
       setConfidence(res.data.confidence);
