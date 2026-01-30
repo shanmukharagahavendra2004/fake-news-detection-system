@@ -5,6 +5,9 @@ The project follows **MLOps best practices** with automated training using **Git
 
 ---
 
+🔗 **Live Demo (Frontend):** https://fake-news-detectionsystem.vercel.app/ 
+🔗 **Backend API:** https://shanmukharaghavendrar-fake-news-detection-system.hf.space  
+
 🔗 **Repository:** [https://github.com/shanmukharagahavendra2004/fake-news-detection-system](https://github.com/shanmukharagahavendra2004/fake-news-detection-system)
 🔗 **CI Pipeline:** GitHub Actions (Automated Training & Artifacts)
 
