@@ -227,39 +227,6 @@ python fake-news-mlops/src/evaluate.py
 
 ---
 
-## 🚧 Common Issues & Fixes
-
-### ❌ NLTK Stopwords Error
-
-**Fix:**
-
-```python
-import nltk
-nltk.download('stopwords')
-```
-
-### ❌ Dataset Path Error
-
-Ensure dataset exists at:
-
-```
-fake-news-mlops/dataset/fake.csv
-fake-news-mlops/dataset/true.csv
-```
-
----
-
-## 🔮 Future Enhancements
-
-* [ ] API deployment using FastAPI
-* [ ] Frontend integration (React)
-* [ ] Model versioning with MLflow
-* [ ] Dataset versioning using DVC
-* [ ] Cloud deployment (AWS/GCP)
-* [ ] Monitoring & retraining pipeline
-
----
-
 ## 👤 Author
 
 **Shanmukha Raghavendra**
