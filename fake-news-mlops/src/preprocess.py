@@ -9,6 +9,7 @@ from nltk.stem import WordNetLemmatizer
 STOPWORDS=set(stopwords.words('english'))
 lemmatizer=WordNetLemmatizer()
 
+#cleaning function
 def clean_text(text: str) -> str:
     """
     Perform NLP preprocessing on input text:
