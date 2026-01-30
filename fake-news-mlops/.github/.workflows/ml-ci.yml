@@ -1,32 +1,22 @@
 name: ML CI Pipeline
 
-on: 
-  workflow_dispatch
+on:
+  workflow_dispatch:
   push:
-    branches: [ main, master, develop ]  # Specify branches
-  pull_request:
-    branches: [ main, master ]
+    branches: [ main ]
 
 jobs:
-  build:
+  train:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
+    - name: Checkout repository
       uses: actions/checkout@v3
 
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
         python-version: '3.9'
-
-    - name: Cache pip packages
-      uses: actions/cache@v3
-      with:
-        path: ~/.cache/pip
-        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
-        restore-keys: |
-          ${{ runner.os }}-pip-
 
     - name: Install dependencies
       run: |
@@ -35,12 +25,10 @@ jobs:
 
     - name: Run training
       run: |
-        export CI=true
         python src/train.py
 
-    - name: Upload model artifacts
-      if: success()
-      uses: actions/upload-artifact@v3
+    - name: Upload trained models
+      uses: actions/upload-artifact@v4
       with:
-        name: model-artifacts
+        name: fake-news-model
         path: models/
